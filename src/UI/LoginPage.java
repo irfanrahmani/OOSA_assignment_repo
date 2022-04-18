@@ -34,16 +34,14 @@ public class LoginPage extends JFrame {
         forgotMyPassword.addActionListener(this::forgotMyPasswordAction);
         //Temporary for font's
 
-        LP_panel.setBackground(new Color(232, 0, 17));
-        LP_componentsPanel.setBackground(new Color(11, 19, 232,20));
+        LP_panel.setBackground(new Color(46, 250, 255));
+        LP_componentsPanel.setBackground(new Color(2, 2, 16,20));
         setVisible(true);
     }
 
     //Let's write the functionality of forgot my password account in a seperate method
     public void forgotMyPasswordAction(ActionEvent event)
     {
-        JOptionPane.showMessageDialog(null,"Please contact the IT Officer to reset your password");
-
         ForgotPass dialog = new ForgotPass();
         dialog.pack();
         dialog.setVisible(true);
