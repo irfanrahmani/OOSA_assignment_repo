@@ -14,8 +14,7 @@ public class Connect {
     {
         try {
             Class.forName(DB_PACKAGE);
-            Connection connect = null;
-            connect = DriverManager.getConnection(DB_URL+DB_NAME,DB_USER, "");
+            Connection connect = DriverManager.getConnection(DB_URL+DB_NAME,DB_USER, "");
             JOptionPane.showMessageDialog(null, "Database Connected");
             connect.close();
         }
