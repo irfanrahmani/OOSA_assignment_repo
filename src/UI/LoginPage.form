@@ -56,7 +56,7 @@
               <text value="Employee Name"/>
             </properties>
           </component>
-          <component id="b5914" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+          <component id="b5914" class="javax.swing.JTextField" binding="LP_userName">
             <constraints>
               <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="230" height="-1"/>
@@ -77,7 +77,7 @@
               <text value="Password"/>
             </properties>
           </component>
-          <component id="ad22" class="javax.swing.JPasswordField" binding="passwordField1" default-binding="true">
+          <component id="ad22" class="javax.swing.JPasswordField" binding="LP_password">
             <constraints>
               <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="230" height="-1"/>

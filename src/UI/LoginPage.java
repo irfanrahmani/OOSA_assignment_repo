@@ -1,14 +1,17 @@
 package UI;
 
+import DatabaseHandler.Connect;
+import Model.LoginUser;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
 public class LoginPage extends JFrame {
-    private JTextField textField1;
+    private JTextField LP_userName;
     private JPanel LP_panel;
     private JPanel LP_componentsPanel;
-    private JPasswordField passwordField1;
+    private JPasswordField LP_password;
     private JComboBox LP_employee_status_box;
     private JButton LP_SignIn;
     private JButton forgotMyPassword;
@@ -32,13 +35,22 @@ public class LoginPage extends JFrame {
 
         //Setting actions for ForgotMyPasswod Button
         forgotMyPassword.addActionListener(this::forgotMyPasswordAction);
-        //Temporary for font's
+
+        //seeting actions for the signIN button
+        LP_SignIn.addActionListener(this::signInAction);
 
         LP_panel.setBackground(new Color(46, 250, 255));
         LP_componentsPanel.setBackground(new Color(2, 2, 16,20));
         setVisible(true);
     }
 
+    //Let's write the method which define the action for username and password
+    public void signInAction(ActionEvent event)
+    {
+        LoginUser lu = new LoginUser(LP_userName.getText().toString(), LP_password.getPassword().toString());
+        Connect con = new Connect();
+        con.userAuthentication(lu);
+    }
     //Let's write the functionality of forgot my password account in a seperate method
     public void forgotMyPasswordAction(ActionEvent event)
     {
